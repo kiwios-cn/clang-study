@@ -1,23 +1,18 @@
 #include<stdio.h>
 int main()
 {
-	int product ,i , a ;
-	int num[100];
-	i = 0;
-	a = 0;
-
-	product = i * i;
-
-	while(product <= 1000)
-	{
-		i++;
-		a++;	
+	int product , i;
+	
+	for (i = 1 ; i < 1000; i++){
 		product = i * i;
-		num[a] = product;
-
-		if(product <= 1000, a / 8 == 0)
-		printf("product= %d ",num[a]);
+		if (product > 1000){
+			break;
+		}
+		printf(" %d ",product);
+		if(i % 8 == 0){
+			printf("\n");	
+		}
 	}
+	printf("\n");
 	return 0;
-
 }
