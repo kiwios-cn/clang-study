@@ -16,7 +16,7 @@ int main()
 					break;
 
 			case '/' :
-					printf("%d", a / b);
+					printf("%f", (float)a / b);
 					break;
 
 			case '*' :
