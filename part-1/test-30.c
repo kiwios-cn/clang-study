@@ -2,9 +2,7 @@
 
 int delete_element(int Array[] , int cap , int x , int y);
 
-int main()
-{
-
+int main() {
 	int Array[5] = { 2 , 3 , 3 , 7 , 9 };
 	int n ;
 	int y = 0;
@@ -14,7 +12,6 @@ int main()
 	for(int i = 0 ; i < 5 ; i++) {
 
 		if( Array[i] == n ) { 
-
 			delete_element(Array , 5 , i , y );
 			i--;
 			y++;
@@ -28,6 +25,7 @@ int main()
 	}
 	printf("\n");
 
+	return 0;
 }
 
 int delete_element(int Array[] , int cap , int x , int y){
@@ -39,37 +37,6 @@ int delete_element(int Array[] , int cap , int x , int y){
 
 	}
 
+	return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
