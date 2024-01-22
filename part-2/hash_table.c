@@ -1,26 +1,39 @@
-#include<stdio.h>
-#include <sys/_types/_null.h>
-#include<uthash.h>
-#include<stdlib.h>
-struct hashTable {
-  int key;
-  int val;
-  UT_hash_handle hh;
+#include<stdio.h> 
+struct HashTable {
+  int content;
+  int subscript;
 };
+int main() 
+{
+  int nums[10] = {2 , 7 , 11 , 15 , 9 , 3 , 50 , 4 , 10 ,43};
+  int numsSize = 10 ;
+  int target = 10 ;
+  int cycle_num = 0;
+  int *return_numsubscript ;
+  struct  HashTable * hashtable;
 
-struct hashTable* hashtable;
-
-struct hashTable* find(int ikey) {
-  struct hashTable* tmp;
-  HASH_FIND_INT(hashtable,&ikey,tmp);
-  return tmp;
+  for(int i = 0 ; i < numsSize ; i++) {
+    cycle_num++;
+    for(int j = 0 ; j < cycle_num ; j++) {
+      if(target-nums[i] == (hashtable+j)->content) {
+         *(return_numsubscript+1) = i;
+        *return_numsubscript = (hashtable+j) -> subscript; 
+      } else {
+        (hashtable+cycle_num-1)->content = nums[i]; 
+        (hashtable+cycle_num-1)->subscript = i;
+      }
+    }
+  } 
+  printf("%d %d\n",*return_numsubscript,*(return_numsubscript+1));  
 }
+struct HashTable* find(int content) {
+  struct HashTable* temp;
+  
 
-void insert(int ikey, int ival) {
-  struct hashTable* it = find(ikey);
-  if(it == NULL) {
-    struct hashTable* tmp = malloc(sizeof(struct hashTable));
-    tmp->key = ikey, tmp->val = ival ;
-    HASH_AND_INT(hashtable,key,tmp);
-  }
+
+
+
+
+
+  return temp;
 }
