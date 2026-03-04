@@ -2,7 +2,7 @@
 int main()
 {
 	char num;
-
+	printf("请输入一个字符: ");
 	num = getchar();
 
 	if(num>='a'&& num<='z'){
@@ -11,14 +11,11 @@ int main()
 	else if(num>='A'&& num<='Z'){
 		printf("%c\n",num);
 	}
-	else if(num>0){
-		
+	else {
+		printf("%c ASCII is %d\n",num,num);
 
 	}	
 
-
-	else
-		printf("%c ASCII is %d\n",num,num);
 		return 0;
 
 }
